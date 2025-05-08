@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = document.getElementById("phone").value.trim();
     const email = document.getElementById("email").value.trim();
 
-    const usernameRegex = /^[a-zA-Z0-9]{4,}$/;
+    const usernameRegex = /^[a-zA-Z]{2,}$/;
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
     const phoneRegex = /^0\d{9}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!usernameRegex.test(username)) {
       document.getElementById("signup-username-error").textContent =
-        "Tên tài khoản phải có ít nhất 4 ký tự và không chứa ký tự đặc biệt.";
+        "Tên tài khoản phải có ít nhất 2 ký tự và không chứa ký tự đặc biệt, không chứa chữ số.";
       isValid = false;
     }
 
